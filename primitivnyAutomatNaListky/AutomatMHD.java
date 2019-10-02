@@ -44,6 +44,10 @@ public class AutomatMHD {
         return this.trzba;
     }
     
+    public void zmenCenuListka(int novaCenaListka) {
+        this.cenaListka = novaCenaListka;
+    }
+    
     /**
      * Prijme mincu danej hodnoty od kupujuceho
      */

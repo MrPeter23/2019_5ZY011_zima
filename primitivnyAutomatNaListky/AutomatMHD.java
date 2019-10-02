@@ -71,9 +71,17 @@ public class AutomatMHD {
         System.out.println("*************************");
         System.out.println();
         
-        // pripocitaj vlozenu ciastku k trzbe
-        this.trzba = this.trzba + this.vlozenaCiastka;
-        // nuluj vlozenu ciastku
+        // pripocitaj cenu listka k trzbe
+        this.trzba = this.trzba + this.cenaListka;
+        // zniz vlozenu ciastku
+        this.vlozenaCiastka = this.vlozenaCiastka - this.cenaListka;
+    }
+    
+    public void vydajZostatok() {
+        System.out.print("Davam ti zostatok: ");
+        System.out.print(this.vlozenaCiastka);
+        System.out.println(" centov");
+        
         this.vlozenaCiastka = 0;
     }
 }

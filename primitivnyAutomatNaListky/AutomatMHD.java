@@ -40,6 +40,10 @@ public class AutomatMHD {
         return this.vlozenaCiastka;
     }
     
+    public int getTrzba() {
+        return this.trzba;
+    }
+    
     /**
      * Prijme mincu danej hodnoty od kupujuceho
      */

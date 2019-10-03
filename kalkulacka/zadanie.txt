@@ -2,3 +2,9 @@
 
 5 alebo 5.5
 
+kalk = new Kalkulacka(1)
+kalk.scitaj(2)
+kalk.vynasob(5)
+kalk.odpocitaj(4)
+kalk.vydel(2)
+kalk.getVysledok()

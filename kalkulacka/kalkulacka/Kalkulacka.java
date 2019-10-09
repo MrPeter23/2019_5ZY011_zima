@@ -44,7 +44,7 @@ public class Kalkulacka {
             this.pamat = 0;
             this.mrcStlacene = false;
         } else {
-            this.medzivysledok = this.pamat;
+            this.operand = this.pamat;
             this.mrcStlacene = true;
         }
     }
@@ -55,7 +55,7 @@ public class Kalkulacka {
     }
     
     public void mR() {
-        this.medzivysledok = this.pamat;
+        this.operand = this.pamat;
         this.mrcStlacene = false;
     }
     

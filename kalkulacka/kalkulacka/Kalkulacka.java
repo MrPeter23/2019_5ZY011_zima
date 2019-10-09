@@ -27,6 +27,14 @@ public class Kalkulacka {
         return this.medzivysledok;
     }
     
+    public void mRC() {
+        if (this.medzivysledok != this.pamat) {
+            this.medzivysledok = this.pamat;
+        } else {
+            this.pamat = 0;
+        }
+    }
+    
     public void mC() {
         this.pamat = 0;
     }

@@ -1,8 +1,10 @@
 public class Kalkulacka {
     private double medzivysledok;
+    private double pamat;
     
     public Kalkulacka(double prveCislo) {
         this.medzivysledok = prveCislo;
+        this.pamat = 0;
     }
     
     public void scitaj(double operand) {
@@ -23,5 +25,21 @@ public class Kalkulacka {
     
     public double getVysledok() {
         return this.medzivysledok;
+    }
+    
+    public void mC() {
+        this.pamat = 0;
+    }
+    
+    public void mR() {
+        this.medzivysledok = this.pamat;
+    }
+    
+    public void mPlus() {
+        this.pamat += this.medzivysledok;
+    }
+    
+    public void mS() {
+        this.pamat = this.medzivysledok;
     }
 }

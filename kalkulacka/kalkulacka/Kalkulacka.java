@@ -2,30 +2,36 @@ public class Kalkulacka {
     private double medzivysledok;
     private double pamat;
     private boolean mrcStlacene;
+    private double operand;
     
     public Kalkulacka(double prveCislo) {
         this.medzivysledok = prveCislo;
         this.pamat = 0;
         this.mrcStlacene = false;
+        this.operand = 0;
     }
     
-    public void scitaj(double operand) {
-        this.medzivysledok += operand;
+    public void setOperand(double operand) {
+        this.operand = operand;
+    }
+    
+    public void scitaj() {
+        this.medzivysledok += this.operand;
         this.mrcStlacene = false;
     }
     
-    public void odpocitaj(double operand) {
-        this.medzivysledok -= operand;
+    public void odpocitaj() {
+        this.medzivysledok -= this.operand;
         this.mrcStlacene = false;
     }
     
-    public void vynasob(double operand) {
-        this.medzivysledok *= operand;
+    public void vynasob() {
+        this.medzivysledok *= this.operand;
         this.mrcStlacene = false;
     }
     
-    public void vydel(double operand) {
-        this.medzivysledok /= operand;
+    public void vydel() {
+        this.medzivysledok /= this.operand;
         this.mrcStlacene = false;
     }
     

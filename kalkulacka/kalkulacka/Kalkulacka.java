@@ -5,12 +5,12 @@ public class Kalkulacka {
     private double operand;
     private char poslednyOperator;
     
-    public Kalkulacka(double prveCislo) {
-        this.medzivysledok = prveCislo;
+    public Kalkulacka() {
+        this.medzivysledok = 0;
         this.pamat = 0;
         this.mrcStlacene = false;
         this.operand = 0;
-        this.poslednyOperator = '=';
+        this.poslednyOperator = '+';
     }
     
     public void setOperand(double operand) {

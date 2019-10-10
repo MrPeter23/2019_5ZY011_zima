@@ -3,12 +3,14 @@ public class Kalkulacka {
     private double pamat;
     private boolean mrcStlacene;
     private double operand;
+    private char poslednyOperator;
     
     public Kalkulacka(double prveCislo) {
         this.medzivysledok = prveCislo;
         this.pamat = 0;
         this.mrcStlacene = false;
         this.operand = 0;
+        this.poslednyOperator = '=';
     }
     
     public void setOperand(double operand) {
@@ -16,23 +18,98 @@ public class Kalkulacka {
     }
     
     public void scitaj() {
-        this.medzivysledok += this.operand;
+        switch (this.poslednyOperator) {
+            case '+':
+                this.medzivysledok += this.operand;
+                break;
+            case '-':
+                this.medzivysledok -= this.operand;
+                break;
+            case '*':
+                this.medzivysledok *= this.operand;
+                break;
+            case '/':
+                this.medzivysledok /= this.operand;
+                break;
+        }
         this.mrcStlacene = false;
+        this.poslednyOperator = '+';
     }
     
     public void odpocitaj() {
-        this.medzivysledok -= this.operand;
+        switch (this.poslednyOperator) {
+            case '+':
+                this.medzivysledok += this.operand;
+                break;
+            case '-':
+                this.medzivysledok -= this.operand;
+                break;
+            case '*':
+                this.medzivysledok *= this.operand;
+                break;
+            case '/':
+                this.medzivysledok /= this.operand;
+                break;
+        }
         this.mrcStlacene = false;
+        this.poslednyOperator = '-';
     }
     
     public void vynasob() {
-        this.medzivysledok *= this.operand;
+        switch (this.poslednyOperator) {
+            case '+':
+                this.medzivysledok += this.operand;
+                break;
+            case '-':
+                this.medzivysledok -= this.operand;
+                break;
+            case '*':
+                this.medzivysledok *= this.operand;
+                break;
+            case '/':
+                this.medzivysledok /= this.operand;
+                break;
+        }
         this.mrcStlacene = false;
+        this.poslednyOperator = '*';
     }
     
     public void vydel() {
-        this.medzivysledok /= this.operand;
+        switch (this.poslednyOperator) {
+            case '+':
+                this.medzivysledok += this.operand;
+                break;
+            case '-':
+                this.medzivysledok -= this.operand;
+                break;
+            case '*':
+                this.medzivysledok *= this.operand;
+                break;
+            case '/':
+                this.medzivysledok /= this.operand;
+                break;
+        }
         this.mrcStlacene = false;
+        this.poslednyOperator = '/';
+    }
+
+    public void vypocitaj() {
+        switch (this.poslednyOperator) {
+            case '+':
+                this.medzivysledok += this.operand;
+                break;
+            case '-':
+                this.medzivysledok -= this.operand;
+                break;
+            case '*':
+                this.medzivysledok *= this.operand;
+                break;
+            case '/':
+                this.medzivysledok /= this.operand;
+                break;
+        }
+        this.mrcStlacene = false;
+        this.poslednyOperator = '=';
     }
     
     public double getVysledok() {

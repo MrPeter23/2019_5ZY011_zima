@@ -33,7 +33,9 @@ public class Kalkulacka {
                 break;
         }
         this.mrcStlacene = false;
-        this.poslednyOperator = operator;
+        if (operator != '=') {
+            this.poslednyOperator = operator;
+        }
     }
     
     public double getVysledok() {

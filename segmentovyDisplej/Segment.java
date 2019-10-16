@@ -6,5 +6,15 @@ public class Segment {
         this.zobrazenie.zmenStrany(dlzkaSegmentu, hrubkaSegmentu);
         this.zobrazenie.posunVodorovne(poziciaX - 60);
         this.zobrazenie.posunZvisle(poziciaY - 50);
+        this.zobrazenie.zmenFarbu("black");
+        this.zobrazenie.zobraz();
+    }
+    
+    public void rozsviet() {
+        this.zobrazenie.zmenFarbu("red");
+    }
+    
+    public void zhasni() {
+        this.zobrazenie.zmenFarbu("black");
     }
 }

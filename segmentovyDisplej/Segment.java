@@ -17,4 +17,12 @@ public class Segment {
     public void zhasni() {
         this.zobrazenie.zmenFarbu("black");
     }
+    
+    public void nastavSvietenie(boolean maSvietit) {
+        if (maSvietit) {
+            this.zobrazenie.zmenFarbu("red");
+        } else {
+            this.zobrazenie.zmenFarbu("black");
+        }
+    }
 }

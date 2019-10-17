@@ -11,7 +11,7 @@ public class Segment {
     }
     
     public void rozsviet() {
-        this.zobrazenie.zmenFarbu("red");
+        this.zobrazenie.zmenFarbu("yellow");
     }
     
     public void zhasni() {
@@ -20,7 +20,7 @@ public class Segment {
     
     public void nastavSvietenie(boolean maSvietit) {
         if (maSvietit) {
-            this.zobrazenie.zmenFarbu("red");
+            this.zobrazenie.zmenFarbu("yellow");
         } else {
             this.zobrazenie.zmenFarbu("black");
         }

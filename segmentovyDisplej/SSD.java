@@ -7,7 +7,13 @@ public class SSD {
     private Segment segmentF;
     private Segment segmentG;
     
-    public SSD(int dlzkaSegmentu, int hrubkaSegmentu, int poziciaDisplejaX, int poziciaDisplejaY) {
+    public SSD(int dlzkaSegmentu, int poziciaDisplejaX, int poziciaDisplejaY) {
+        int hrubkaSegmentu = dlzkaSegmentu * 2 / 5;
+        
+        if (hrubkaSegmentu == 0) {
+            hrubkaSegmentu = 1;
+        }
+        
         this.segmentA = new Segment(dlzkaSegmentu, hrubkaSegmentu, poziciaDisplejaX + hrubkaSegmentu, poziciaDisplejaY);
         this.segmentG = new Segment(dlzkaSegmentu, hrubkaSegmentu, poziciaDisplejaX + hrubkaSegmentu, poziciaDisplejaY + dlzkaSegmentu + hrubkaSegmentu);
         this.segmentD = new Segment(dlzkaSegmentu, hrubkaSegmentu, poziciaDisplejaX + hrubkaSegmentu, poziciaDisplejaY + 2 * dlzkaSegmentu + 2 * hrubkaSegmentu);

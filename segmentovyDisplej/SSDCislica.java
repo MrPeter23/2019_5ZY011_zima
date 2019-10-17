@@ -1,8 +1,8 @@
 public class SSDCislica {
     private SSD displej;
     
-    public SSDCislica(int dlzkaSegmentu, int hrubkaSegmentu, int poziciaDisplejaX, int poziciaDisplejaY) {
-        this.displej = new SSD(dlzkaSegmentu, hrubkaSegmentu, poziciaDisplejaX, poziciaDisplejaY);
+    public SSDCislica(int dlzkaSegmentu, int poziciaDisplejaX, int poziciaDisplejaY) {
+        this.displej = new SSD(dlzkaSegmentu, poziciaDisplejaX, poziciaDisplejaY);
     }
     
     public void rozsvietCislicu(int cislica) {

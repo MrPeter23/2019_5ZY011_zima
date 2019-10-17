@@ -6,6 +6,7 @@
 public class CiselnyDisplej {
     private int hornaHranica;
     private int hodnota;
+    private SSDDvojciferneCislo displej;
     
     /**
      * Inicializuje ciselny displej na hodnotu 0. Horna hranica sa pouzije
@@ -13,9 +14,11 @@ public class CiselnyDisplej {
      * @param pthis.hornaHranica Predstavuje cislo, ktore hodnota ciselneho
      * displeja nemoze dosiahnut.
      */
-    public CiselnyDisplej(int hornaHranica) {
+    public CiselnyDisplej(int hornaHranica, int dlzkaSegmentu, int poziciaDisplejaX, int poziciaDisplejaY) {
         this.hornaHranica = hornaHranica;
         this.hodnota = 0;
+        this.displej = new SSDDvojciferneCislo(dlzkaSegmentu, poziciaDisplejaX, poziciaDisplejaY);
+        this.displej.rozsviet(this.hodnota);
     }
     
     /**
@@ -37,6 +40,7 @@ public class CiselnyDisplej {
         if (hodnota >= 0) {
             if (hodnota < this.hornaHranica) {
                 this.hodnota = hodnota;
+                this.displej.rozsviet(this.hodnota);
             }
         }
     }
@@ -59,5 +63,6 @@ public class CiselnyDisplej {
      */
     public void krok() {
         this.hodnota = (this.hodnota + 1) % this.hornaHranica;
+        this.displej.rozsviet(this.hodnota);
     }
 }

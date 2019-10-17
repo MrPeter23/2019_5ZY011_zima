@@ -10,9 +10,9 @@ public class DigitalneHodiny {
      * Inicializuje digitalne hodiny. Cas zacina plynut od
      * polnoci (00:00).
      */
-    public DigitalneHodiny(int dlzkaSegmentu) {
-        this.hodiny = new CiselnyDisplej(24);
-        this.minuty = new CiselnyDisplej(60);
+    public DigitalneHodiny(int dlzkaSegmentu, int poziciaDisplejaX, int poziciaDisplejaY) {
+        this.hodiny = new CiselnyDisplej(24, dlzkaSegmentu, poziciaDisplejaX, poziciaDisplejaY);
+        this.minuty = new CiselnyDisplej(60, dlzkaSegmentu, poziciaDisplejaX + 5 * dlzkaSegmentu, poziciaDisplejaY);
     }
     
     /**

@@ -15,4 +15,8 @@ public class Klient {
         this.meno = meno;
         this.banka = banka;
     }
+    
+    public String getNazovBanky() {
+        return this.banka.getNazov();
+    }
 }

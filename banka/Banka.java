@@ -1,5 +1,11 @@
 public class Banka {
-    public Banka() {
-        // initialise instance variables
+    private String nazov;
+    
+    public Banka(String nazov) {
+        this.nazov = nazov;
+    }
+    
+    public String getNazov() {
+        return this.nazov;
     }
 }

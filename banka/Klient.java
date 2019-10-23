@@ -20,26 +20,30 @@ public class Klient {
         return this.banka.getNazov();
     }
     
-    public void vlozNaUcet(long sumaVCentoch) {
-        if (sumaVCentoch <= 0) {
+    public void vlozNaUcet(double suma) {
+        if (suma <= 0) {
             System.out.println("Vkladat mozes len kladnu ciastku!");
             return;
         }
         
-        this.sumaNaUcte += sumaVCentoch;
+        this.sumaNaUcte += suma * 100;
     }
     
-    public void vyberZUctu(long sumaVCentoch) {
-        if (sumaVCentoch <= 0) {
+    public void vyberZUctu(double suma) {
+        if (suma <= 0) {
             System.out.println("Vyberat mozes len kladnu ciastku!");
             return;
         }
         
-        if (this.sumaNaUcte < sumaVCentoch) {
+        if (this.sumaNaUcte < suma * 100) {
             System.out.println("Na ucte nemas dost peniazov!");
             return;
         }
         
-        this.sumaNaUcte -= sumaVCentoch;
+        this.sumaNaUcte -= suma * 100;
+    }
+    
+    public double getStavUctu() {
+        
     }
 }

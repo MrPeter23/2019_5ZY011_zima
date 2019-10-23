@@ -19,4 +19,24 @@ public class Klient {
     public String getNazovBanky() {
         return this.banka.getNazov();
     }
+    
+    public void vlozNaUcet(long sumaVCentoch) {
+        if (sumaVCentoch > 0) {
+            this.sumaNaUcte += sumaVCentoch;
+        } else {
+            System.out.println("Vkladat mozes len kladnu ciastku!");
+        }
+    }
+    
+    public void vyberZUctu(long sumaVCentoch) {
+        if (sumaVCentoch > 0) {
+            if (this.sumaNaUcte >= sumaVCentoch) {
+                this.sumaNaUcte -= sumaVCentoch;
+            } else {
+                System.out.println("Na ucte nemas dost peniazov!");
+            }
+        } else {
+            System.out.println("Vyberat mozes len kladnu ciastku!");
+        }
+    }
 }

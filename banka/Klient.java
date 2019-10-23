@@ -44,6 +44,6 @@ public class Klient {
     }
     
     public double getStavUctu() {
-        
+        return this.sumaNaUcte / 100.;
     }
 }

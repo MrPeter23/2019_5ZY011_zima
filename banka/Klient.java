@@ -21,22 +21,25 @@ public class Klient {
     }
     
     public void vlozNaUcet(long sumaVCentoch) {
-        if (sumaVCentoch > 0) {
-            this.sumaNaUcte += sumaVCentoch;
-        } else {
+        if (sumaVCentoch <= 0) {
             System.out.println("Vkladat mozes len kladnu ciastku!");
+            return;
         }
+        
+        this.sumaNaUcte += sumaVCentoch;
     }
     
     public void vyberZUctu(long sumaVCentoch) {
-        if (sumaVCentoch > 0) {
-            if (this.sumaNaUcte >= sumaVCentoch) {
-                this.sumaNaUcte -= sumaVCentoch;
-            } else {
-                System.out.println("Na ucte nemas dost peniazov!");
-            }
-        } else {
+        if (sumaVCentoch <= 0) {
             System.out.println("Vyberat mozes len kladnu ciastku!");
+            return;
         }
+        
+        if (this.sumaNaUcte < sumaVCentoch) {
+            System.out.println("Na ucte nemas dost peniazov!");
+            return;
+        }
+        
+        this.sumaNaUcte -= sumaVCentoch;
     }
 }

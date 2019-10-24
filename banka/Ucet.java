@@ -2,11 +2,13 @@ public class Ucet {
     private Banka banka;
     private long suma;
     private Klient klient;
+    private String iban;
     
-    public Ucet(Banka banka, Klient klient) {
+    public Ucet(Banka banka, Klient klient, String iban) {
         this.suma = 0;
         this.banka = banka;
         this.klient = klient;
+        this.iban = iban;
     }
     
     public String getNazovBanky() {

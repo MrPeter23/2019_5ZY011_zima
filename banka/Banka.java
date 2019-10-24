@@ -8,4 +8,8 @@ public class Banka {
     public String getNazov() {
         return this.nazov;
     }
+    
+    public Ucet zalozUcet() {
+        return new Ucet(this);
+    }
 }

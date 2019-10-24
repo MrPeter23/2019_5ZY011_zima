@@ -1,10 +1,12 @@
 public class Ucet {
     private Banka banka;
     private long suma;
+    private Klient klient;
     
-    public Ucet(Banka banka) {
+    public Ucet(Banka banka, Klient klient) {
         this.suma = 0;
         this.banka = banka;
+        this.klient = klient;
     }
     
     public String getNazovBanky() {

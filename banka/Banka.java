@@ -9,7 +9,7 @@ public class Banka {
         return this.nazov;
     }
     
-    public Ucet zalozUcet() {
-        return new Ucet(this);
+    public Ucet zalozUcet(Klient klient) {
+        return new Ucet(this, klient);
     }
 }

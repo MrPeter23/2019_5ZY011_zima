@@ -11,10 +11,10 @@ public class Lopticka {
         Random nahodneCisla = new Random();
         
         this.poziciaX = 150;
-        this.poziciaY = 150;
+        this.poziciaY = 100;
         this.lopta = new Kruh();
         this.lopta.posunVodorovne(120);
-        this.lopta.posunZvisle(80);
+        this.lopta.posunZvisle(30);
         this.lopta.zmenPriemer(20);
         this.lopta.zobraz();
         

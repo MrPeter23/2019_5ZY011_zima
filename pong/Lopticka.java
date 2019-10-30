@@ -30,5 +30,13 @@ public class Lopticka {
         this.lopta.posunVodorovne(this.smerX * 10);
         this.lopta.posunZvisle(this.smerY * 10);
         this.lopta.zobraz();
+        
+        if (this.poziciaX <= 10 || this.poziciaX >= 290) {
+            this.smerX *= -1;
+        }
+        
+        if (this.poziciaY <= 10 || this.poziciaY >= 290) {
+            this.smerY *= -1;
+        }
     }
 }

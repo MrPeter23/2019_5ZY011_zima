@@ -21,6 +21,10 @@ public class Hra {
         this.lopticka.posun();
     }
     
+    public void zrus() {
+        System.exit(0);
+    }
+    
     public int getVyskaPola() {
         return this.vyskaPola;
     }

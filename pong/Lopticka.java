@@ -6,12 +6,16 @@ public class Lopticka {
     private Kruh lopta;
     private int smerX;
     private int smerY;
+    private Hra hra;
     
-    public Lopticka() {
+    public Lopticka(Hra hra) {
         Random nahodneCisla = new Random();
         
-        this.poziciaX = 150;
-        this.poziciaY = 100;
+        this.hra = hra;
+        
+        this.poziciaX = this.hra.getSirkaPola() / 2;
+        this.poziciaY = this.hra.getVyskaPola() / 2;
+        
         this.lopta = new Kruh();
         this.lopta.posunVodorovne(120);
         this.lopta.posunZvisle(30);
@@ -31,11 +35,11 @@ public class Lopticka {
         this.lopta.posunZvisle(this.smerY * 10);
         this.lopta.zobraz();
         
-        if (this.poziciaX <= 10 || this.poziciaX >= 290) {
+        if (this.poziciaX <= 10 || this.poziciaX >= this.hra.getSirkaPola() - 10) {
             this.smerX *= -1;
         }
         
-        if (this.poziciaY <= 10 || this.poziciaY >= 290) {
+        if (this.poziciaY <= 10 || this.poziciaY >= this.hra.getVyskaPola() - 10) {
             this.smerY *= -1;
         }
     }

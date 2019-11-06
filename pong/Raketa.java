@@ -20,10 +20,22 @@ public class Raketa {
     }
     
     public void posunDole() {
+        if (this.poziciaY >= this.hra.getVyskaPola() - 15) {
+            return;
+        }
+        
         this.raketa.posunZvisle(5);
+        
+        this.poziciaY += 5;
     }
     
     public void posunHore() {
+        if (this.poziciaY <= 15) {
+            return;
+        }
+        
         this.raketa.posunZvisle(-5);
+        
+        this.poziciaY -= 5;
     }
 }

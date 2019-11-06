@@ -28,10 +28,14 @@ public class Hra {
         
         switch (this.lopticka.getPozicia()) {
             case "vlavo":
-                System.out.println("Lavy prehral");
+                if (!this.hrac1.koliduje(this.lopticka)) {
+                    System.out.println("Lavy prehral");
+                }
                 break;
             case "vpravo":
-                System.out.println("Pravy prehral");
+                if (!this.hrac2.koliduje(this.lopticka)) {
+                    System.out.println("Pravy prehral");
+                }
                 break;
         }
     }

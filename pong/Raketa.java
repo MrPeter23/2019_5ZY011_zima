@@ -18,4 +18,12 @@ public class Raketa {
         this.raketa.zmenStrany(3, 30);
         this.raketa.zobraz();
     }
+    
+    public void posunDole() {
+        this.raketa.posunZvisle(1);
+    }
+    
+    public void posunHore() {
+        this.raketa.posunZvisle(-1);
+    }
 }

@@ -38,4 +38,20 @@ public class Hra {
     public int getSirkaPola() {
         return this.sirkaPola;
     }
+    
+    public void posunDole() {
+        this.hrac1.posunDole();
+    }
+    
+    public void posunHore() {
+        this.hrac1.posunHore();
+    }
+    
+    public void posunVlavo() {
+        this.hrac2.posunDole();
+    }
+    
+    public void posunVpravo() {
+        this.hrac2.posunHore();
+    }
 }

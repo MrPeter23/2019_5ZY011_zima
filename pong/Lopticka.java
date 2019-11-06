@@ -17,8 +17,8 @@ public class Lopticka {
         this.poziciaY = this.hra.getVyskaPola() / 2;
         
         this.lopta = new Kruh();
-        this.lopta.posunVodorovne(120);
-        this.lopta.posunZvisle(30);
+        this.lopta.posunVodorovne(this.poziciaX - 30);
+        this.lopta.posunZvisle(this.poziciaY - 70);
         this.lopta.zmenPriemer(20);
         this.lopta.zobraz();
         

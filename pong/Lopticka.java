@@ -43,4 +43,17 @@ public class Lopticka {
             this.smerY *= -1;
         }
     }
+    
+    /**
+     * Vrati "vlavo" - ak na lavom okraji, "vpravo" - na pravom okraji, "stred" - inak
+     */
+    public String getPozicia() {
+        if (this.poziciaX <= 10) {
+            return "vlavo";
+        } else if (this.poziciaX >= this.hra.getSirkaPola() - 10) {
+            return "vpravo";
+        } else {
+            return "stred";
+        }
+    }
 }

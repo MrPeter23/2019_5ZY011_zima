@@ -20,10 +20,10 @@ public class Raketa {
     }
     
     public void posunDole() {
-        this.raketa.posunZvisle(1);
+        this.raketa.posunZvisle(5);
     }
     
     public void posunHore() {
-        this.raketa.posunZvisle(-1);
+        this.raketa.posunZvisle(-5);
     }
 }

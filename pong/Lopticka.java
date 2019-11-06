@@ -26,6 +26,10 @@ public class Lopticka {
         this.smerY = (int) Math.pow(-1, nahodneCisla.nextInt());
     }
     
+    public void zrus() {
+        this.lopta.skry();
+    }
+    
     public void posun() {
         this.poziciaX += this.smerX * 10;
         this.poziciaY += this.smerY * 10;

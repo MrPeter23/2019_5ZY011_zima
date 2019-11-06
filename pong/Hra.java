@@ -30,11 +30,15 @@ public class Hra {
             case "vlavo":
                 if (!this.hrac1.koliduje(this.lopticka)) {
                     System.out.println("Lavy prehral");
+                    this.lopticka.zrus();
+                    this.lopticka = new Lopticka(this);
                 }
                 break;
             case "vpravo":
                 if (!this.hrac2.koliduje(this.lopticka)) {
                     System.out.println("Pravy prehral");
+                    this.lopticka.zrus();
+                    this.lopticka = new Lopticka(this);
                 }
                 break;
         }

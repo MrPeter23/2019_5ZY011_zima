@@ -1,4 +1,7 @@
 public class Hra {
+    private Raketa hrac1;
+    private Raketa hrac2;
+    
     private Lopticka lopticka;
     private int sirkaPola;
     private int vyskaPola;
@@ -15,6 +18,9 @@ public class Hra {
         pozadie.zobraz();
         
         this.lopticka = new Lopticka(this);
+        
+        this.hrac1 = new Raketa(this, true);
+        this.hrac2 = new Raketa(this, false);
     }
     
     public void tik() {

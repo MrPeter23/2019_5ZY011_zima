@@ -15,6 +15,10 @@ public class Ucet {
         return this.banka.getNazov();
     }
     
+    public String getIban() {
+        return this.iban;
+    }
+    
     public void vloz(double suma) {
         if (suma <= 0) {
             System.out.println("Vkladat mozes len kladnu ciastku!");

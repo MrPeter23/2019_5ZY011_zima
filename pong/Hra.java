@@ -71,4 +71,9 @@ public class Hra {
     public void posunVpravo() {
         this.hrac2.posunHore();
     }
+    
+    public void spusti() {
+        new Manazer()
+            .spravujObjekt(this);
+    }
 }

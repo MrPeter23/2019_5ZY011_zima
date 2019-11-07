@@ -42,6 +42,28 @@ public class Ucet {
         this.suma -= suma * 100;
     }
     
+    public void prevedPeniaze(String cielovyIban, double suma) {
+        if (suma <= 0) {
+            System.out.println("Prevadzat mozes len kladnu ciastku!");
+            return;
+        }
+        
+        if (this.suma < suma * 100) {
+            System.out.println("Na ucte nemas dost peniazov!");
+            return;
+        }
+        
+        Ucet ucet = this.banka.getUcet(cielovyIban);
+        
+        if (ucet == null) {
+            System.out.println("Nespravne cislo cieloveho uctu!");
+            return;
+        }
+        
+        this.suma -= suma * 100;
+        ucet.vloz(suma);
+    }
+    
     public double getStav() {
         return this.suma / 100.;
     }

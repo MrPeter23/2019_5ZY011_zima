@@ -27,6 +27,16 @@ public class Banka {
         return null;
     }
     
+    public double getCelkoveImanie() {
+        long medzivysledok = 0;
+        
+        for (Ucet ucet : this.ucty) {
+            medzivysledok += ucet.getStav() * 100;
+        }
+        
+        return medzivysledok / 100.;
+    }
+    
     public Ucet zalozUcet(Klient klient) {
         Random nahodneCisla = new Random();
         long cisloUctu = Math.abs(nahodneCisla.nextLong()) % 10000000000L;

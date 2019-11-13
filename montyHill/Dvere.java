@@ -9,6 +9,10 @@ public class Dvere {
         this.suVybrate = false;
     }
     
+    public boolean mozeOtvorit() {
+        return !this.jeAuto && !this.suVybrate;
+    }
+    
     public void otvor() {
         if (this.suVybrate) {
             System.out.println("Nemozes otvorit vybrate dvere");

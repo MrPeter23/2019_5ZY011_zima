@@ -14,4 +14,17 @@ public class Hra {
             this.dvere[i] = new Dvere(vyherneDvere == i);
         }
     }
+    
+    public void vyberDvere(int cislo) {
+        if (cislo < 0 || cislo >= this.dvere.length) {
+            System.out.println("Dvere su len " + this.dvere.length);
+            return;
+        }
+        
+        for (Dvere dvere : this.dvere) {
+            dvere.zrusVyberAkTreba();
+        }
+        
+        this.dvere[cislo].vyber();
+    }
 }

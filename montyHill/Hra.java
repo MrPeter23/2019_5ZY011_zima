@@ -36,4 +36,14 @@ public class Hra {
         
         this.dvere[cislo].otvor();
     }
+    
+    public boolean jeVyhra() {
+        for (Dvere dvere : this.dvere) {
+            if (dvere.suVyherne()) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
 }

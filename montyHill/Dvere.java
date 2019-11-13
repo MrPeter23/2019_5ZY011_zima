@@ -29,6 +29,10 @@ public class Dvere {
         this.suOtvorene = true;
     }
     
+    public boolean mozeVybrat() {
+        return !this.suOtvorene && !this.suVybrate;
+    }
+    
     public void vyber() {
         if (this.suVybrate) {
             System.out.println("Tieto dvere su uz vybrate");

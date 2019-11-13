@@ -15,6 +15,14 @@ public class Hra {
         }
     }
     
+    public boolean mozeVybratDvere(int cislo) {
+        if (cislo < 0 || cislo >= this.dvere.length) {
+            return false;
+        }
+        
+        return this.dvere[cislo].mozeVybrat();
+    }
+    
     public void vyberDvere(int cislo) {
         if (cislo < 0 || cislo >= this.dvere.length) {
             System.out.println("Dvere su len " + this.dvere.length);

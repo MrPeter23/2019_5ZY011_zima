@@ -20,6 +20,15 @@ public class NahodnyPokus {
         } while (!this.hra.mozeOtvoritDvere(otvaraneDvere));
         
         this.hra.otvorDvere(otvaraneDvere);
+        
+        if (this.maHracMenit) {
+            int vyberaneDvere;
+            do {
+                vyberaneDvere = nahodneCisla.nextInt(3);
+            } while (!this.hra.mozeVybratDvere(vyberaneDvere));
+            
+            this.hra.vyberDvere(vyberaneDvere);
+        }
     }
     
     public boolean jeVyhra() {

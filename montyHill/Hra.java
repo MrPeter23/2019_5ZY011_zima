@@ -27,4 +27,13 @@ public class Hra {
         
         this.dvere[cislo].vyber();
     }
+    
+    public void otvorDvere(int cislo) {
+        if (cislo < 0 || cislo >= this.dvere.length) {
+            System.out.println("Dvere su len " + this.dvere.length);
+            return;
+        }
+        
+        this.dvere[cislo].otvor();
+    }
 }

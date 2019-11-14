@@ -5,8 +5,8 @@ public class NahodnyPokus {
     private boolean maHracMenit;
     private Random nahodneCisla;
     
-    public NahodnyPokus(boolean maHracMenit) {
-        this.nahodneCisla = new Random();
+    public NahodnyPokus(Random nahodneCisla, boolean maHracMenit) {
+        this.nahodneCisla = nahodneCisla;
         
         this.hra = new Hra(this.nahodneCisla);
         this.maHracMenit = maHracMenit;

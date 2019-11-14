@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Experiment {
     private int pocet;
     private int pocetVyhier;
@@ -10,8 +12,10 @@ public class Experiment {
     }
     
     public void vykonaj() {
+        Random nahodneCisla = new Random();
+        
         for (int i = 0; i < this.pocet; i++) {
-            NahodnyPokus pokus = new NahodnyPokus(this.maHracMenit);
+            NahodnyPokus pokus = new NahodnyPokus(nahodneCisla, this.maHracMenit);
             pokus.vykonaj();
             if (pokus.jeVyhra()) {
                 this.pocetVyhier++;

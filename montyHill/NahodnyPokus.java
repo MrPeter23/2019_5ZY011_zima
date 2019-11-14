@@ -22,12 +22,20 @@ public class NahodnyPokus {
         this.hra.otvorDvere(otvaraneDvere);
         
         if (this.maHracMenit) {
-            int vyberaneDvere;
-            do {
-                vyberaneDvere = nahodneCisla.nextInt(3);
-            } while (!this.hra.mozeVybratDvere(vyberaneDvere));
+            for (int i = 0; i < 3; i++) {
+                if (this.hra.mozeVybratDvere(i)) {
+                    this.hra.vyberDvere(i);
+                    return;
+                }
+            }
             
+            /*
+            int vyberaneDvere = 0;
+            while (!this.hra.mozeVybratDvere(vyberaneDvere)) {
+                vyberaneDvere++;
+            }
             this.hra.vyberDvere(vyberaneDvere);
+            */
         }
     }
     

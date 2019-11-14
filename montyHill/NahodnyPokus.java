@@ -3,20 +3,21 @@ import java.util.Random;
 public class NahodnyPokus {
     private Hra hra;
     private boolean maHracMenit;
+    private Random nahodneCisla;
     
     public NahodnyPokus(boolean maHracMenit) {
-        this.hra = new Hra();
+        this.nahodneCisla = new Random();
+        
+        this.hra = new Hra(this.nahodneCisla);
         this.maHracMenit = maHracMenit;
     }
     
     public void vykonaj() {
-        Random nahodneCisla = new Random();
-        
-        this.hra.vyberDvere(nahodneCisla.nextInt(3));
+        this.hra.vyberDvere(this.nahodneCisla.nextInt(3));
         
         int otvaraneDvere;
         do {
-            otvaraneDvere = nahodneCisla.nextInt(3);
+            otvaraneDvere = this.nahodneCisla.nextInt(3);
         } while (!this.hra.mozeOtvoritDvere(otvaraneDvere));
         
         this.hra.otvorDvere(otvaraneDvere);

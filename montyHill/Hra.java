@@ -3,10 +3,8 @@ import java.util.Random;
 public class Hra {
     private Dvere[] dvere;
     
-    public Hra() {
+    public Hra(Random nahodneCisla) {
         this.dvere = new Dvere[3];
-        
-        Random nahodneCisla = new Random();
         
         int vyherneDvere = nahodneCisla.nextInt(this.dvere.length);
         

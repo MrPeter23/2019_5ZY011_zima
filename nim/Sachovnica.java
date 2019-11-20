@@ -1,19 +1,11 @@
-
-/**
- * Write a description of class Sachovnica here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class Sachovnica {
     /**
      * Constructor for objects of class Sachovnica
      */
-    public Sachovnica() {
-        for (int y = 0; y < 8; y++) {
-            for (int x = 0; x < 8; x++) {
-                // if (x % 2 == y % 2) {
-                if ((x + y) % 2 == 1) {
+    public Sachovnica(int sirka, int vyska) {
+        for (int y = 0; y < vyska; y++) {
+            for (int x = 0; x < sirka; x++) {
+                if ((x + y) % 2 != vyska % 2) {
                     Stvorec policko = new Stvorec();
                     
                     policko.posunVodorovne(20 * x - 60);

@@ -1,8 +1,11 @@
+import java.util.ArrayList;
+
 public class Sachovnica {
-    /**
-     * Constructor for objects of class Sachovnica
-     */
+    private ArrayList<Stvorec> policka;
+    
     public Sachovnica(int sirka, int vyska) {
+        this.policka = new ArrayList<Stvorec>();
+        
         for (int y = 0; y < vyska; y++) {
             for (int x = 0; x < sirka; x++) {
                 if ((x + y) % 2 != vyska % 2) {
@@ -13,9 +16,21 @@ public class Sachovnica {
                     
                     policko.zmenStranu(20);
                     
-                    policko.zobraz();
+                    this.policka.add(policko);
                 }
             }
+        }
+    }
+    
+    public void zobraz() {
+        for (Stvorec policko : this.policka) {
+            policko.zobraz();
+        }
+    }
+    
+    public void skry() {
+        for (Stvorec policko : this.policka) {
+            policko.skry();
         }
     }
 }

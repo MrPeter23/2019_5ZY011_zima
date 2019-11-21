@@ -4,10 +4,13 @@ public class Sachovnica {
     private ArrayList<Stvorec> policka;
     private int sirka;
     private int vyska;
+    private Kamen kamen;
     
     public Sachovnica(int sirka, int vyska) {
         this.sirka = sirka;
         this.vyska = vyska;
+        
+        this.kamen = null;
         
         this.policka = new ArrayList<Stvorec>();
         
@@ -27,6 +30,10 @@ public class Sachovnica {
         }
     }
     
+    public void vlozKamen(Kamen kamen) {
+        this.kamen = kamen;
+    }
+    
     public int getSirka() {
         return this.sirka;
     }
@@ -39,11 +46,17 @@ public class Sachovnica {
         for (Stvorec policko : this.policka) {
             policko.zobraz();
         }
+        if (this.kamen != null) {
+            this.kamen.zobraz();
+        }
     }
     
     public void skry() {
         for (Stvorec policko : this.policka) {
             policko.skry();
+        }
+        if (this.kamen != null) {
+            this.kamen.skry();
         }
     }
 }

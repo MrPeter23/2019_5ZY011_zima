@@ -6,7 +6,6 @@ public class Kamen {
         this.kamen.posunZvisle(20 * 0 - 60 + 1);
         this.kamen.zmenPriemer(18);
         this.kamen.zmenFarbu("yellow");
-        sachovnica.vlozKamen(this);
     }
     
     public void zobraz() {

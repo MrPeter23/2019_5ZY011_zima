@@ -30,8 +30,9 @@ public class Sachovnica {
         }
     }
     
-    public void vlozKamen(Kamen kamen) {
-        this.kamen = kamen;
+    public Kamen vlozKamen() {
+        this.kamen = new Kamen(this);
+        return this.kamen;
     }
     
     public int getSirka() {

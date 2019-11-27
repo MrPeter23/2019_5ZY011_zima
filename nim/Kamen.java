@@ -25,6 +25,14 @@ public class Kamen {
         this.kamen.skry();
     }
     
+    public int getX() {
+        return this.stareX;
+    }
+    
+    public int getY() {
+        return this.stareY;
+    }
+    
     public void posunKamen(int x, int y) {
         if (x < 0 || x >= this.sachovnica.getSirka()) {
             return;

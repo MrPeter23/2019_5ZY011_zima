@@ -20,6 +20,14 @@ public class Nim {
         }
     }
     
+    public int getX() {
+        return this.kamen.getX();
+    }
+    
+    public int getY() {
+        return this.kamen.getY();
+    }
+    
     public String getVyherca() {
         return this.menoVyhercu;
     }

@@ -22,6 +22,8 @@ public class NimKlikaci {
             this.nim.posunVlavo(xKamena - xPolicka);
         } else if (xPolicka == xKamena) {
             this.nim.posunDole(yKamena - yPolicka);
+        } else if ((xPolicka - xKamena) == (yPolicka - yKamena)) {
+            this.nim.posunSikmo(yKamena - yPolicka);
         }
         
         if (this.nim.getHracNaTahu() != null) {

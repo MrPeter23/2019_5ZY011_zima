@@ -43,14 +43,18 @@ public class Nim {
     }
     
     public void posunDole(int oKolko) {
-        this.posun(true, oKolko);
+        this.posun(true, false, oKolko);
     }
     
     public void posunVlavo(int oKolko) {
-        this.posun(false, oKolko);
+        this.posun(false, true, oKolko);
     }
     
-    private void posun(boolean tahDole, int oKolko) {
+    public void posunSikmo(int oKolko) {
+        this.posun(true, true, oKolko);
+    }
+    
+    private void posun(boolean tahDole, boolean tahVlavo, int oKolko) {
         if (oKolko <= 0) {
             System.out.println("Musis tahat o kladny pocet policok");
             return;
@@ -60,11 +64,15 @@ public class Nim {
         int y;
         
         if (tahDole) {
-            x = this.kamen.getX();
             y = this.kamen.getY() - oKolko;
         } else {
-            x = this.kamen.getX() - oKolko;
             y = this.kamen.getY();
+        }
+        
+        if (tahVlavo) {
+            x = this.kamen.getX() - oKolko;
+        } else {
+            x = this.kamen.getX();
         }
         
         if (y < 0) {

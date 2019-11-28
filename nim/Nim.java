@@ -28,35 +28,34 @@ public class Nim {
     }
     
     public void posunDole(int oKolko) {
+        this.posun(true, oKolko);
+    }
+    
+    public void posunVlavo(int oKolko) {
+        this.posun(false, oKolko);
+    }
+    
+    private void posun(boolean tahDole, int oKolko) {
         if (oKolko <= 0) {
             System.out.println("Musis tahat o kladny pocet policok");
             return;
         }
         
-        int x = this.kamen.getX();
-        int y = this.kamen.getY() - oKolko;
+        int x;
+        int y;
+        
+        if (tahDole) {
+            x = this.kamen.getX();
+            y = this.kamen.getY() - oKolko;
+        } else {
+            x = this.kamen.getX() - oKolko;
+            y = this.kamen.getY();
+        }
         
         if (y < 0) {
             System.out.println("Snazis sa vybehnut zo sachovnice");
             return;
         }
-        
-        if (x == 0 && y == 0) {
-            this.menoVyhercu = this.getHracNaTahu();
-        }
-        
-        this.kamen.posunKamen(x, y);
-        this.prvyNaTahu = !this.prvyNaTahu;
-    }
-    
-    public void posunVlavo(int oKolko) {
-        if (oKolko <= 0) {
-            System.out.println("Musis tahat o kladny pocet policok");
-            return;
-        }
-        
-        int x = this.kamen.getX() - oKolko;
-        int y = this.kamen.getY();
         
         if (x < 0) {
             System.out.println("Snazis sa vybehnut zo sachovnice");

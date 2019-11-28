@@ -1,8 +1,11 @@
+import java.util.Random;
+
 public class Nim {
     private Kamen kamen;
     private String[] menaHracov;
     private boolean prvyNaTahu;
     private String menoVyhercu;
+    private Random nahodneCisla;
     
     public Nim(int sirka, int vyska, String menoPrveho, String menoDruheho) {
         Sachovnica sachovnica = new Sachovnica(sirka, vyska);
@@ -11,6 +14,10 @@ public class Nim {
         this.menaHracov = new String[] {menoPrveho, menoDruheho};
         this.prvyNaTahu = true;
         this.menoVyhercu = null;
+        this.nahodneCisla = new Random();
+        if (this.getHracNaTahu() != null && this.getHracNaTahu().equals("PC")) {
+            this.tahPC();
+        }
     }
     
     public String getVyherca() {
@@ -68,5 +75,26 @@ public class Nim {
         
         this.kamen.posunKamen(x, y);
         this.prvyNaTahu = !this.prvyNaTahu;
+        
+        if (this.getHracNaTahu() != null && this.getHracNaTahu().equals("PC")) {
+            this.tahPC();
+        }
+    }
+    
+    private void tahPC() {
+        int x = this.kamen.getX();
+        int y = this.kamen.getY();
+        
+        if (x > y) {
+            this.posunVlavo(x - y);
+        } else if (x < y) {
+            this.posunDole(y - x);
+        } else {
+            if (this.nahodneCisla.nextBoolean()) {
+                this.posunVlavo(this.nahodneCisla.nextInt(x) + 1);
+            } else {
+                this.posunDole(this.nahodneCisla.nextInt(x) + 1);
+            }
+        }
     }
 }
